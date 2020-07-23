@@ -18,6 +18,7 @@ namespace AShow
             this.Width = double.Parse(ConfigurationManager.AppSettings["width"]);
             this.Height = double.Parse(ConfigurationManager.AppSettings["height"]);
             Codes = ConfigurationManager.AppSettings["codes"].ToString().Split(',');
+            DebugBoxText.Opacity = double.Parse(ConfigurationManager.AppSettings["opacity"]);
             DispatcherTimer dispatcherTimer = new DispatcherTimer();
             dispatcherTimer.Tick += new EventHandler(SetText);
             dispatcherTimer.Interval = new TimeSpan(0, 0, int.Parse(ConfigurationManager.AppSettings["interval"]));
